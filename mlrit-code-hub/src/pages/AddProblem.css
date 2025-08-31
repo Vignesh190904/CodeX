@@ -1,0 +1,501 @@
+:root {
+  --mlrit-purple: #8A00C4;
+  --mlrit-purple-light: #a78bfa;
+  --mlrit-purple-dark: #7c3aed;
+  --mlrit-pink: #ec4899;
+  --mlrit-blue: #3b82f6;
+  --mlrit-cyan: #06b6d4;
+  --mlrit-orange: #ffa116;
+  --bg-dark: #0f172a;
+  --bg-mid: #1e1e2e;
+  --bg-light: #2a2a3a;
+  --bg-card: #1e293b;
+  --bg-card-hover: #252540;
+  --text-primary: #ffffff;
+  --text-secondary: #bdbdfd;
+  --text-tertiary: #94a3b8;
+  --border-color: #2d2d4d;
+  --border-focus: #8A00C4;
+  --success-green: #10b981;
+  --warning-orange: #f59e0b;
+  --error-red: #ef4444;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Problem Number Display */
+.problem-number-display {
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-left: 4px solid var(--mlrit-orange);
+}
+
+.next-problem-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.problem-number-label {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.problem-number-value {
+  color: var(--mlrit-orange);
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--mlrit-orange), var(--mlrit-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(255, 161, 22, 0.3);
+}
+
+.update-numbers-btn {
+  background: var(--mlrit-blue);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.update-numbers-btn:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.update-numbers-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Main Container */
+.add-problem {
+  min-height: 100vh;
+  background: #0f172a;
+  padding: 2rem 1rem;
+  padding-top: var(--content-top-padding);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: var(--text-primary);
+}
+
+/* Header Section */
+.add-problem h2 {
+  text-align: center;
+  color: #ffa116;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(255, 161, 22, 0.3);
+}
+
+/* Form Container */
+.add-problem form {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Form Sections */
+.form-section {
+  padding: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-card);
+}
+
+.form-section:last-child {
+  border-bottom: none;
+}
+
+.form-section h3 {
+  color: #ffa116;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.form-section h3::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: linear-gradient(135deg, #ffa116, var(--mlrit-purple));
+  border-radius: 2px;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Input Styles */
+.add-problem input,
+.add-problem textarea,
+.add-problem select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border-radius: 0.75rem;
+  background: #181a25;
+  border: 1.5px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.add-problem input:focus,
+.add-problem textarea:focus,
+.add-problem select:focus {
+  outline: none;
+  border-color: #8A00C4;
+  box-shadow: 0 0 15px #8A00C499;
+  background: #181a25;
+}
+
+.add-problem input::placeholder,
+.add-problem textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+.add-problem select {
+  cursor: pointer;
+}
+
+.add-problem select option {
+  background: var(--bg-mid);
+  color: var(--text-primary);
+}
+
+.add-problem textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.add-problem textarea[rows="3"] {
+  min-height: 80px;
+}
+
+.add-problem textarea[rows="4"] {
+  min-height: 120px;
+}
+
+.add-problem textarea[rows="6"] {
+  min-height: 150px;
+}
+
+/* Constraints and Tags */
+.constraint-item,
+.tag-item {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  align-items: center;
+}
+
+.constraint-item input,
+.tag-item input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.remove-btn {
+  background: var(--error-red);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.remove-btn:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+/* Test Cases */
+.test-case {
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.test-case:hover {
+  border-color: var(--mlrit-cyan);
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.1);
+}
+
+.test-case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.test-case-header h4 {
+  color: var(--mlrit-cyan);
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.test-case-header .remove-btn {
+  background: var(--error-red);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  width: auto;
+  height: auto;
+}
+
+.test-case-header .remove-btn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.test-case-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Buttons */
+.add-problem button[type="button"] {
+  background: var(--mlrit-blue);
+  color: var(--text-primary);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-problem button[type="button"]:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Form Actions */
+.form-actions {
+  padding: 2.5rem;
+  background: var(--bg-mid);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: var(--text-primary);
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Loading States */
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Animation for new sections */
+.test-case,
+.constraint-item,
+.tag-item {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus indicators for accessibility */
+.add-problem input:focus-visible,
+.add-problem textarea:focus-visible,
+.add-problem select:focus-visible {
+  outline: 2px solid var(--mlrit-purple);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+.add-problem form::-webkit-scrollbar {
+  width: 8px;
+}
+
+.add-problem form::-webkit-scrollbar-track {
+  background: var(--bg-mid);
+}
+
+.add-problem form::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.add-problem form::-webkit-scrollbar-thumb:hover {
+  background: var(--mlrit-purple);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-problem {
+    padding: 1rem 0.5rem;
+  }
+  
+  .add-problem h2 {
+    font-size: 2rem;
+  }
+  
+  .form-section {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .test-case-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .constraint-item,
+  .tag-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .remove-btn {
+    align-self: flex-end;
+  }
+  
+  .form-actions {
+    padding: 1.5rem;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .problem-number-value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-problem h2 {
+    font-size: 1.75rem;
+  }
+  
+  .form-section h3 {
+    font-size: 1.25rem;
+  }
+  
+  .test-case-header h4 {
+    font-size: 1rem;
+  }
+  
+  .form-section {
+    padding: 1rem;
+  }
+  
+  .problem-number-value {
+    font-size: 1.25rem;
+  }
+}
+  

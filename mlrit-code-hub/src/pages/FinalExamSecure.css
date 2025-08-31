@@ -1,0 +1,390 @@
+/* Final Exam Secure Styles */
+.final-exam-secure {
+  min-height: 100vh;
+  background: #0f1419;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  position: relative;
+}
+
+.secure-exam-header {
+  background: #1a1f2e;
+  border-bottom: 1px solid #2d3748;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.security-indicators {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.security-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.security-badge.fullscreen-required {
+  background: #dc2626;
+  color: white;
+}
+
+.security-badge.proctoring-active {
+  background: #10b981;
+  color: white;
+}
+
+.security-badge.tab-switches {
+  background: #f59e0b;
+  color: white;
+}
+
+.security-badge.security-violations {
+  background: #ef4444;
+  color: white;
+}
+
+.exam-timer-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.timer-warning {
+  color: #ef4444 !important;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.exam-content {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.question-section {
+  background: #1a1f2e;
+  border: 1px solid #2d3748;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.question-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.question-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin-bottom: 20px;
+}
+
+.mcq-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mcq-option-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #0f1419;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mcq-option-item:hover {
+  border-color: #3b82f6;
+  background: #1e293b;
+}
+
+.mcq-option-item input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #3b82f6;
+}
+
+.option-label {
+  flex: 1;
+  color: #d1d5db;
+  font-size: 15px;
+}
+
+.coding-problem-section {
+  background: #1a1f2e;
+  border: 1px solid #2d3748;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.coding-problem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f1419;
+  border-bottom: 1px solid #2d3748;
+  padding: 12px 16px;
+}
+
+.language-selector {
+  background: #374151;
+  color: #ffffff;
+  border: 1px solid #4b5563;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.run-code-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.run-code-btn:hover:not(:disabled) {
+  background: #059669;
+}
+
+.run-code-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.code-editor-container {
+  height: 350px;
+}
+
+.code-output-section {
+  background: #0f1419;
+  border-top: 1px solid #2d3748;
+  padding: 16px;
+}
+
+.output-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #9ca3af;
+}
+
+.code-output {
+  background: #000000;
+  border: 1px solid #374151;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 0;
+  color: #d1d5db;
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+  min-height: 60px;
+}
+
+.exam-navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1f2e;
+  border-top: 1px solid #2d3748;
+  padding: 16px 20px;
+  position: sticky;
+  bottom: 0;
+}
+
+.nav-button {
+  background: #374151;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-button:hover:not(:disabled) {
+  background: #4b5563;
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submit-exam-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-exam-btn:hover {
+  background: #b91c1c;
+}
+
+.question-navigation {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.question-nav-item {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #4b5563;
+  background: transparent;
+  color: #9ca3af;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.question-nav-item.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: white;
+}
+
+.question-nav-item.completed {
+  background: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
+.question-nav-item:hover {
+  border-color: #6b7280;
+}
+
+/* Security Warning Modal */
+.security-warning-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.security-warning-dialog {
+  background: #1a1f2e;
+  border: 1px solid #dc2626;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px;
+}
+
+.warning-icon {
+  color: #dc2626;
+  margin-bottom: 16px;
+}
+
+.warning-heading {
+  color: #dc2626;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.warning-text {
+  color: #d1d5db;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+.warning-action-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.warning-action-btn:hover {
+  background: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .secure-exam-header {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+  
+  .security-indicators {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .exam-content {
+    padding: 16px;
+  }
+  
+  .exam-navigation-bar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+  
+  .question-navigation {
+    order: -1;
+  }
+}

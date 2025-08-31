@@ -1,0 +1,305 @@
+/* Container */
+.admin-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #0f172a;
+  border-radius: 12px;
+  padding-top: var(--content-top-padding);
+  color: #ffffff;
+}
+
+/* Heading */
+.admin-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffa116;
+  text-shadow: 0 0 10px rgba(255, 161, 22, 0.3);
+}
+
+/* Actions */
+.admin-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #8A00C4;
+  margin-right: 1rem;
+  background: #181a25;
+  color: #ffffff;
+  box-shadow: 0 0 10px #8A00C499;
+}
+
+.add-problem-btn {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.add-problem-btn:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Problems List */
+.problems-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.problem-card {
+  background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3a 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(138, 0, 196, 0.1);
+  box-shadow: 0 4px 16px rgba(138, 0, 196, 0.1);
+  transition: all 0.3s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(138, 0, 196, 0.2);
+  border-color: rgba(138, 0, 196, 0.3);
+}
+
+.problem-card h2 {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.problem-card p {
+  color: #bdbdfd;
+  margin-top: 0.5rem;
+}
+
+/* Buttons inside problem card */
+.problem-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.delete-btn, .edit-btn {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+.edit-btn {
+  background-color: #1976d2;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #1565c0;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  background: none;
+  border: 1px solid #1976d2;
+  color: #1976d2;
+  padding: 0.5rem 0.8rem;
+  margin: 0 0.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #1976d2;
+  color: white;
+}
+
+.active-page {
+  background-color: #1976d2;
+  color: white;
+}
+
+/* Modal */
+.modal {
+  background: white;
+  padding: 2rem;
+  width: 60%;
+  max-width: 800px;
+  min-width: 600px;
+  max-height: 90vh;
+  margin: 2rem auto;
+  border-radius: 12px;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal input[type="text"],
+.modal textarea,
+.modal select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.modal textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.testcase-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.3);
+  border-radius: 8px;
+  border: 1px solid rgba(71, 85, 105, 0.2);
+}
+
+.testcase-row input {
+  flex: 1;
+}
+
+.testcase-row textarea {
+  resize: vertical;
+  min-height: 60px;
+  max-height: 120px;
+}
+
+.add-testcase-btn {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  width: fit-content;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.add-testcase-btn:hover {
+  background-color: #4a148c;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.save-btn {
+  background-color: #388e3c;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.save-btn:hover {
+  background-color: #2e7d32;
+}
+
+.cancel-btn {
+  background-color: #757575;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.cancel-btn:hover {
+  background-color: #616161;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .problem-buttons {
+    flex-direction: column;
+  }
+
+  .testcase-row {
+    flex-direction: column;
+    padding: 0.8rem;
+  }
+
+  .modal {
+    width: 95vw;
+    max-width: 95vw;
+    min-width: unset;
+    max-height: 95vh;
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+
+  .overlay {
+    padding: 1rem;
+  }
+}

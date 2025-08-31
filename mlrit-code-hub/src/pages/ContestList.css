@@ -1,0 +1,33 @@
+.contest-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-3xl);
+    background: #1e293b;
+    border-radius: 8px;
+    color: white;
+    padding-top: var(--content-top-padding);
+  }
+  
+  .contest-list h2 {
+    color: #ffa116;
+    margin-bottom: 20px;
+  }
+  
+  .contest-list li {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #0f172a;
+    border-radius: 6px;
+  }
+  
+  .enter-btn {
+    background: #ffa116;
+    padding: 8px 12px;
+    display: inline-block;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  

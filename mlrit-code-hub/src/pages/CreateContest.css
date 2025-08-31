@@ -1,0 +1,45 @@
+.create-contest {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #1e293b;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .create-contest h2 {
+    color: #ffa116;
+    margin-bottom: 20px;
+  }
+  
+  .create-contest form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .create-contest input,
+  .create-contest textarea,
+  .create-contest select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .selected-problems {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #0f172a;
+    border-radius: 5px;
+  }
+  
+  .create-contest button {
+    padding: 10px;
+    background: #ffa116;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,38 @@
+.edit-problem {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #1e293b;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .edit-problem h2 {
+    color: #ffa116;
+    margin-bottom: 20px;
+  }
+  
+  .edit-problem form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-problem input,
+  .edit-problem textarea,
+  .edit-problem select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .edit-problem button {
+    padding: 10px;
+    background: #ffa116;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

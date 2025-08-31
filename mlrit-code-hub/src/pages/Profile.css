@@ -1,0 +1,299 @@
+/* --- Remove old leetcode-profile-* styles and add new modern coding platform profile styles --- */
+
+:root {
+  --mlrit-purple: #8b5cf6;
+  --mlrit-purple-light: #a78bfa;
+  --mlrit-purple-dark: #7c3aed;
+  --mlrit-blue: #3b82f6;
+  --bg-dark: #0f0f23;
+  --bg-mid: #1a1a2e;
+  --bg-light: #16213e;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+}
+
+.profile-hero-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-mid) 50%, var(--bg-light));
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  padding-top: var(--content-top-padding);
+}
+
+.profile-hero-header {
+  position: relative;
+  width: 100%;
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-2xl);
+  background: none;
+}
+
+.profile-hero-gradient {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(120deg, var(--mlrit-purple-dark) 0%, var(--mlrit-blue) 100%);
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.profile-hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.profile-main-card {
+  background: rgba(26,26,46,0.98);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(139,92,246,0.10);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  min-width: 350px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.profile-avatar-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-avatar-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--mlrit-purple);
+  background: #fff;
+  box-shadow: 0 2px 12px var(--mlrit-purple-dark)30;
+}
+
+.profile-avatar-icon {
+  font-size: 110px;
+  color: var(--mlrit-purple-light);
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px var(--mlrit-purple-dark)30;
+}
+
+.profile-avatar-upload {
+  margin-top: 8px;
+  color: var(--mlrit-purple);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.profile-main-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.profile-main-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-main-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--mlrit-purple-light);
+  margin-right: 1rem;
+}
+
+.profile-main-status {
+  font-size: 1.1rem;
+  color: var(--mlrit-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.profile-main-edit {
+  margin-left: auto;
+  background: var(--mlrit-purple);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+.profile-main-edit:hover {
+  background: var(--mlrit-purple-dark);
+}
+
+.profile-main-meta span {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-right: 1.2rem;
+}
+
+.profile-content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.profile-section-card {
+  background: rgba(22,33,62,0.98);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px var(--mlrit-purple-dark)10;
+  padding: 2rem 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.profile-section-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--mlrit-purple-light);
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+.profile-stats-grid {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile-stat-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  min-width: 120px;
+}
+
+.profile-stat-label {
+  color: var(--text-tertiary);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.profile-stat-value {
+  color: var(--mlrit-purple);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.profile-coding-grid {
+  display: flex;
+  gap: 2.2rem;
+  flex-wrap: wrap;
+}
+
+.profile-coding-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 100px;
+}
+
+.profile-coding-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.2rem;
+}
+.profile-coding-icon.leetcode {
+  color: #FFA116;
+}
+.profile-coding-icon.codechef {
+  color: #5B4638;
+}
+.profile-coding-icon.hackerrank {
+  color: #2EC866;
+}
+.profile-coding-icon.github {
+  color: #24292F;
+}
+
+.profile-coding-block a {
+  color: var(--mlrit-blue);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.profile-coding-block a:hover {
+  color: var(--mlrit-purple);
+  text-decoration: underline;
+}
+
+.profile-activity-card .profile-section-fields {
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .profile-main-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.2rem 1.5rem 1.2rem;
+  }
+  .profile-content-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.profile-edit-form {
+  background: rgba(22,33,62,0.98);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px var(--mlrit-purple-dark)10;
+  padding: 2rem 2rem 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.profile-edit-form label {
+  color: var(--mlrit-purple-light);
+  font-weight: 500;
+  align-self: center;
+  justify-self: end;
+  margin-right: 0.5rem;
+}
+.profile-edit-form input,
+.profile-edit-form select {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--mlrit-purple-light);
+  background: #18182f;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  transition: border 0.2s;
+}
+.profile-edit-form input:focus,
+.profile-edit-form select:focus {
+  border: 1.5px solid var(--mlrit-purple);
+  outline: none;
+}
+.profile-edit-form .profile-main-edit {
+  grid-column: span 2;
+  width: auto;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
